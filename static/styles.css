@@ -1,0 +1,519 @@
+/* ========================= */
+/* 🔥 AJUSTES RESPONSIVE */
+/* ========================= */
+
+*{
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    /* 🔥 evita zoom raro en algunos navegadores */
+    -webkit-text-size-adjust: 100%;
+}
+
+
+/* ========================= */
+/* 🌌 BASE */
+/* ========================= */
+body {
+    margin: 0;
+    font-family: 'Comic Sans MS', Arial, sans-serif;
+    text-align: center;
+
+    background: radial-gradient(circle at top, #0f172a, #020617);
+
+    color: white;
+
+    /* 🔥 ESPACIO PARA EL MENU */
+    padding-bottom: 180px;
+}
+/* ========================= */
+/* 🌌 FONDO ANIMADO */
+/* ========================= */
+.fondo-animado {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    /* 🔲 GRID FUTURISTA */
+    background-image: 
+        linear-gradient(rgba(34,211,238,0.15) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34,211,238,0.15) 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    animation: moverGrid 10s linear infinite;
+}
+
+/* 🌈 LUZ CENTRAL */
+.fondo-animado::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background: radial-gradient(circle at center,
+        rgba(34,211,238,0.25),
+        transparent 60%);
+
+    animation: pulso 3s ease-in-out infinite;
+}
+
+@keyframes moverGrid {
+    from { transform: translateY(0); }
+    to { transform: translateY(40px); }
+}
+
+@keyframes pulso {
+    0% { opacity: 0.2; }
+    50% { opacity: 0.6; }
+    100% { opacity: 0.2; }
+}
+/* ========================= */
+/* 🔤 TITULOS */
+/* ========================= */
+h1 {
+    margin-top: 30px;
+    font-size: 45px;
+    color: #38bdf8;
+
+    text-shadow:
+        0 0 10px #38bdf8,
+        0 0 25px #0ea5e9,
+        0 0 50px #0284c7;
+}
+
+h1 span {
+    color: orange;
+}
+
+.subtitulo {
+    color: #e2e8f0;
+}
+
+/* ========================= */
+/* 🤖 ROBOT */
+/* ========================= */
+.robot {
+    font-size: 70px;
+    margin-bottom: 15px;
+    animation: flotar 2s ease-in-out infinite;
+}
+
+@keyframes flotar {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ========================= */
+/* 💬 MENSAJE IA */
+/* ========================= */
+.mensaje-asistente {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 320px;
+    margin: auto;
+
+    font-size: 16px;
+    line-height: 1.6;
+    white-space: pre-line;
+}
+
+/* ========================= */
+/* 🔻 MENU PRINCIPAL */
+/* ========================= */
+.menu-principal {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+}
+
+/* ========================= */
+/* 🧩 TARJETAS PRO */
+/* ========================= */
+.card {
+    flex: 1;
+    padding: 30px;
+    font-size: 22px;
+    text-decoration: none;
+    color: #e0f2fe;
+
+    border-radius: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+    overflow: hidden;
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    box-shadow: 
+        0 10px 30px rgba(0,0,0,0.6),
+        inset 0 0 10px rgba(255,255,255,0.05);
+
+    transition: all 0.4s ease;
+}
+
+/* ✨ BRILLO ANIMADO */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent
+    );
+    transform: rotate(25deg);
+    top: -100%;
+    left: -100%;
+    transition: 0.6s;
+}
+
+/* HOVER */
+.card:hover::before {
+    top: 100%;
+    left: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.9),
+        0 0 25px rgba(255,255,255,0.2);
+}
+
+/* CLICK */
+.card:active {
+    transform: scale(0.95);
+}
+
+
+/* ========================= */
+/* 🎨 COLORES PRO */
+/* ========================= */
+
+/* CONTAR */
+.contar {
+    background: linear-gradient(135deg, #0ea5e9, #22c55e);
+
+    box-shadow:
+        0 0 20px rgba(14,165,233,0.7),
+        0 0 40px rgba(34,197,94,0.6);
+}
+
+/* OPERACIONES */
+.operaciones {
+    background: linear-gradient(135deg, #2563eb, #9333ea);
+
+    box-shadow:
+        0 0 20px rgba(37,99,235,0.7),
+        0 0 40px rgba(147,51,234,0.6);
+}
+
+
+/* ========================= */
+/* 🧠 TEXTO INTERNO */
+/* ========================= */
+.card span {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* ========================= */
+/* 🔙 BOTÓN VOLVER PRO */
+/* ========================= */
+.btn-volver {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+
+    padding: 10px 18px;
+    border-radius: 20px;
+
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(168,85,247,0.5);
+
+    box-shadow:
+        0 0 10px rgba(168,85,247,0.5),
+        0 0 20px rgba(168,85,247,0.3);
+
+    transition: all 0.3s ease;
+}
+
+.btn-volver:hover {
+    background: rgba(168,85,247,0.2);
+    transform: translateY(-3px) scale(1.05);
+}
+
+.btn-volver:active {
+    transform: scale(0.95);
+}
+
+/* ========================= */
+/* 📊 GRID OPCIONES */
+/* ========================= */
+/* ========================= */
+/* 📊 GRID OPCIONES (MEJORADO) */
+/* ========================= */
+.grid-opciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto; /* 🔥 baja y centra vertical */
+}
+
+/* ========================= */
+/* 🚀 OPCIONES MÁS GRANDES */
+/* ========================= */
+.opcion {
+    padding: 60px; /* 🔥 más grandes */
+    border-radius: 30px;
+    font-size: 26px;
+
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+}
+
+.opcion:active {
+    transform: scale(0.95);
+}
+
+/* COLORES */
+.suma { background: linear-gradient(135deg, #4522c5, #d94ade); }
+.resta { background: linear-gradient(135deg, #218015, #9722c5); }
+.multi { background: linear-gradient(135deg, #4d7381, #c084fc); }
+.div { background: linear-gradient(135deg, #3610dd, #fbbf24); }
+
+/* ========================= */
+/* 🧠 LAYOUT SUMA */
+/* ========================= */
+.contenedor-suma {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 40px auto;
+    gap: 30px;
+}
+
+.lado {
+    flex: 1 1 400px;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+/* IZQUIERDA */
+.izquierda {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* DERECHA */
+.derecha {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid rgba(0,255,150,0.2);
+}
+
+/* ========================= */
+/* 📦 TARJETAS */
+/* ========================= */
+.card-titulo {
+    background: linear-gradient(135deg, #4f46e5, #9333ea);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card-info {
+    background: rgba(255,255,255,0.08);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.card-ejemplo {
+    background: rgba(0,0,0,0.4);
+    border: 1px solid #22c55e;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* ========================= */
+/* 🍎 MANZANAS */
+/* ========================= */
+.manzanas {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+/* ========================= */
+/* 🎮 EJERCICIO */
+/* ========================= */
+.card-ejercicio {
+    background: rgba(0,0,0,0.5);
+    padding: 25px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.pregunta {
+    font-size: 40px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #38bdf8, #f472b6);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* INPUT */
+input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 150px;
+    text-align: center;
+}
+
+/* BOTÓN */
+.btn-responder {
+    background: #22c55e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.btn-responder:hover {
+    background: #16a34a;
+}
+
+/* ========================= */
+/* ⭐ PROGRESO */
+/* ========================= */
+.progreso-box {
+    margin-top: 20px;
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+/* 🧠 EXPLICACIÓN IA */
+.explicacion {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+
+    color: #facc15; /* amarillo suave */
+
+    background: rgba(255,255,255,0.05);
+    padding: 12px;
+    border-radius: 12px;
+
+    border-left: 4px solid #facc15;
+
+    text-align: left;
+
+    animation: aparecer 0.3s ease;
+}
+
+/* ✨ animación suave */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn-micro {
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+
+    background: rgba(168,85,247,0.2);
+    box-shadow: 0 0 10px rgba(168,85,247,0.6);
+
+    transition: 0.2s;
+}
+
+.btn-micro:hover {
+    transform: scale(1.1);
+}
+
+.btn-micro.activo {
+    background: red;
+    box-shadow: 0 0 20px red;
+}
+
+
+.btn-micro{
+    padding:10px 15px;
+    border-radius:50%;
+    border:none;
+    background:#9333ea;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* 🔥 cuando está escuchando */
+.btn-micro.activo{
+    background:#ef4444;
+    transform:scale(1.2);
+    box-shadow:0 0 15px red;
+}
+

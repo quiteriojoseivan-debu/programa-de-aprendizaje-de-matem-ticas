@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Aprender a contar</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+
+<div class="fondo-animado"></div>
+
+<!-- 🔙 VOLVER -->
+<a href="/home" class="btn-volver-top">⬅ Volver</a>
+
+<h1 class="titulo-contar">Aprender a contar 🔢</h1>
+
+<div class="robot">🤖</div>
+
+<!-- 🔥 CONTENEDOR PRO -->
+<div class="contenedor-suma contenedor-contar">
+
+    <!-- 🧠 IZQUIERDA -->
+    <div class="lado izquierda">
+
+        <h2>🤖 Presentación</h2>
+
+        <!-- IA -->
+        <div id="asistente" class="mensaje-asistente"></div>
+
+        <!-- EJEMPLO -->
+        <div class="card-ejemplo">
+            <strong>Ejemplo:</strong>
+            <br><br>
+
+            🍎 🍎 🍎
+
+            <br><br>
+
+            Contamos:
+            <br>
+            1, 2, 3
+
+            <br><br>
+
+            Total = 3
+        </div>
+
+    </div>
+
+    <!-- 🎮 DERECHA -->
+    <div class="lado derecha">
+
+        <h2>🎮 Ejercicios</h2>
+
+        <div class="card-ejercicio">
+
+            <p class="texto-arriba">Cuenta los objetos:</p>
+
+            <!-- 🍎 OBJETOS -->
+            <div id="zona-objetos" class="manzanas"></div>
+
+            <br>
+
+            <input type="number" id="respuesta" placeholder="¿Cuántos hay?">
+
+            <button onclick="verificar()" class="btn-responder">
+                Responder
+            </button>
+
+            <p id="resultado"></p>
+            <p id="explicacion-error" class="explicacion"></p>
+
+        </div>
+
+        <!-- ⭐ PROGRESO -->
+        <div class="progreso-box">
+            <p>Tu progreso</p>
+            <span id="estrellas">☆☆☆☆☆</span>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='contar.js') }}"></script>
+
+</body>
+</html>

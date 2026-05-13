@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Operaciones</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+<!-- 🌌 FONDO -->
+<div class="fondo-animado"></div>
+
+<h1>Operaciones </h1>
+
+<div class="grid-opciones">
+
+    <a href="/suma" class="opcion suma">
+        <span>+</span>
+        <p>Suma</p>
+    </a>
+
+    <a href="/resta" class="opcion resta">
+        <span>-</span>
+        <p>Resta</p>
+    </a>
+
+    <a href="/multiplicacion" class="opcion multi">
+        <span>×</span>
+        <p>Multiplicación</p>
+    </a>
+
+    <a href="/division" class="opcion div">
+        <span>÷</span>
+        <p>División</p>
+    </a>
+
+</div>
+
+<a href="/home" class="btn-volver">⬅ Volver</a>
+
+</body>
+</html>

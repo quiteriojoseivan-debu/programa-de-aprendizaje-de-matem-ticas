@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>{{ tema }}</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+<div class="contenedor-tema">
+
+    <h1 class="titulo-tema">Tema: {{ tema }}</h1>
+
+    <!-- CHAT -->
+    <div id="chat" class="mensaje-tema"></div>
+
+    <!-- INPUT -->
+    <input id="input" placeholder="Escribe tu respuesta">
+    <button onclick="enviar()">Enviar</button>
+
+    <br><br>
+    <a href="/numeros">⬅ Volver</a>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+<script>
+    // 🔥 ACTIVAR IA SEGÚN EL TEMA
+    if ("{{ tema }}" === "suma") {
+        iniciarSumaIA();
+    }
+</script>
+
+</body>
+</html>

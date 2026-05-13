@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Bienvenido</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles-portada.css') }}">
+
+</head>
+
+<body class="portada">
+
+<div class="fondo-animado"></div>
+
+<div class="overlay">
+
+    <h1 class="titulo-portada">
+        🚀 Aprende Matemáticas con IA 🚀
+    </h1>
+
+    <p class="sub-portada">
+        Sumas, restas, multiplicaciones y divisiones para niños de 3° de primaria
+    </p>
+
+    <!-- 🔥 ESTE YA FUNCIONA -->
+    <button class="btn-iniciar" onclick="location.href='/home'">
+        ▶ COMENZAR
+    </button>
+
+</div>
+
+</body>
+</html>

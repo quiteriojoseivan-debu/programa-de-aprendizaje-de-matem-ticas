@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<!-- 🔥 AYUDA A QUE SE ADAPTE BIEN A CUALQUIER COMPUTADORA -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Asistente de Matemáticas</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+
+<body>
+
+<div class="fondo-animado"></div>
+
+<h1>
+    PROGRAMA DE AYUDA PARA EL APRENDIZAJE DE 
+    <span>MATEMÁTICAS</span>
+</h1>
+
+<p class="subtitulo">
+    Aprende resolviendo problemas paso a paso
+</p>
+
+<div class="asistente-box">
+    
+    <div class="robot">🤖</div>
+
+    <!-- 🔥 TEXTO DINÁMICO -->
+    <div id="asistente" class="mensaje-asistente"></div>
+
+</div>
+
+<!-- OPCIONES -->
+<div class="menu-principal">
+
+    <a href="/contar" class="card contar">
+        🔢<br>
+        <span>Aprender a contar</span>
+    </a>
+
+    <a href="/operaciones" class="card operaciones">
+        ➕<br>
+        <span>Operaciones</span>
+    </a>
+
+</div>
+
+<!-- 🔥 JS -->
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+
+</body>
+</html>
